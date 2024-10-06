@@ -4,7 +4,6 @@ import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
 // import Slider from "react-slick";
 import { useEffect, useRef } from "react";
-import CardSlider from "@/components/CardSlider";
 import ProjectCarousel from "@/components/ProjectCarousel";
 
 export default function Work() {

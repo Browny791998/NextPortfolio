@@ -3,6 +3,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { MdSchool } from 'react-icons/md';
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
+import { FC, ReactNode } from 'react';
 
 export default function Timeline() {
     const timelineVariants = {
@@ -10,8 +11,12 @@ export default function Timeline() {
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
     };
 
+    interface AnimatedTimelineElementProps {
+        children: ReactNode;
+      }
+
     // Custom Timeline Element component with in-view animation
-    const AnimatedTimelineElement = ({ children, ...props }) => {
+    const AnimatedTimelineElement: FC<AnimatedTimelineElementProps> = ({ children, ...props }) => {
         const [ref, inView] = useInView({
             triggerOnce: true, // Animates only once when the element comes into view
             threshold: 0.2, // Trigger the animation when 20% of the element is visible
