@@ -9,13 +9,13 @@ function Contact() {
     <section className="container mx-auto pb-12 px-8">
       <div className="grid sm:grid-cols-1 grid-cols-2 gap-8 items-center">
         <div className="relative h-[400px] md:h-full">
-          <Image
+          {/* <Image
             src=""
             alt="Contact visual"
             width={200}
             height={200}
             className="rounded-lg object-cover w-full h-full"
-          />
+          /> */}
         </div>
         <div className="space-y-6">
           <div className="space-y-2">

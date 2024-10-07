@@ -13,9 +13,13 @@ import Skills from "./pages/skills";
 import { useRef } from "react";
 import Languages from "./pages/languages";
 import Contact from "./pages/contact";
+import dynamic from "next/dynamic";
 export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref);
+  const Languages = dynamic(() => import('./pages/languages'), {
+    ssr: false,
+  });
   return (
     <>
       <Preloader />
