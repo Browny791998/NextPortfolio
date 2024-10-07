@@ -135,97 +135,97 @@ function ProjectDialog({ project }: { project: Project }) {
   }
   
 
-export default function ProjectCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-
-  const nextProject = () => {
+  export default function ProjectCarousel() {
+    const [currentIndex, setCurrentIndex] = useState(0);
   
-    setCurrentIndex((prevIndex) =>
-      prevIndex + 1 === projects.length ? 0 : prevIndex + 1
-    )
-  }
-
-  const prevProject = () => {
-
-    setCurrentIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? projects.length - 1 : prevIndex - 1
-    )
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextProject();
-    }, 3000); 
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  return (
-    <div className="mx-auto py-8 container">
-      <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
-      <div className="flex items-center justify-center">
-        <Button
-          variant="outline"
-          size="icon"
-          className="mr-4 rounded-full shadow-sm"
-          onClick={prevProject}
-        >
-          <BsArrowLeftCircleFill className="hover:text-[#0077b5] text-xl text-black dark:text-white" />
-        </Button>
-        <div className="w-full max-w-3xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Card className="h-full py-4">
-                <CardHeader>
-                <div className="mb-4">
-                    <Image 
-                        src="/images/test.jpg" 
+    const nextProject = () => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex + 1 === projects.length ? 0 : prevIndex + 1
+      );
+    };
+  
+    const prevProject = () => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex - 1 < 0 ? projects.length - 1 : prevIndex - 1
+      );
+    };
+  
+    // useEffect(() => {
+    //   const interval = setInterval(() => {
+    //     nextProject();
+    //   }, 3000);
+    //   return () => clearInterval(interval);
+    // }, [currentIndex]);
+  
+    return (
+      <div className="mx-auto py-8">
+        <h2 className="text-3xl font-bold text-center mb-8">My Projects</h2>
+        <div className="flex items-center justify-center">
+          <Button
+            variant="outline"
+            size="icon"
+            className="mr-4 rounded-full shadow-sm"
+            onClick={prevProject}
+          >
+            <BsArrowLeftCircleFill className="hover:text-[#0077b5] text-xl text-black dark:text-white" />
+          </Button>
+          <div className="w-full max-w-3xl">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ opacity: { duration: 0.5 }, x: { duration: 0.5 } }}
+              >
+                <Card className="h-full py-4">
+                  <CardHeader>
+                    <div className="mb-4">
+                      <Image
+                        src="/images/test.jpg"
                         alt="my project"
                         height="900"
                         width="900"
                         className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                    />
-    </div>
-                  <CardTitle>{projects[currentIndex].title}</CardTitle>
-                  <CardDescription>{projects[currentIndex].description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {projects[currentIndex].technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className='bg-white text-black shadow-sm dark:bg-black dark:text-white dark:shadow-neutral-500'>
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between mt-5">
-                  <Button variant="outline" asChild>
-                    <Link href={projects[currentIndex].githubUrl} target="_blank" rel="noopener noreferrer">
-                      {/* <Github className="mr-2 h-4 w-4" /> */}
-                      GitHub
-                    </Link>
-                  </Button>
-                  <ProjectDialog project={projects[currentIndex]} />
-                </CardFooter>
-              </Card>
-            </motion.div>
-          </AnimatePresence>
+                      />
+                    </div>
+                    <CardTitle>{projects[currentIndex].title}</CardTitle>
+                    <CardDescription>{projects[currentIndex].description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {projects[currentIndex].technologies.map((tech, techIndex) => (
+                        <Badge
+                          key={techIndex}
+                          variant="secondary"
+                          className="bg-white text-black shadow-sm dark:bg-black dark:text-white dark:shadow-neutral-500"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex justify-between mt-5">
+                    <Button variant="outline" asChild>
+                      <Link href={projects[currentIndex].githubUrl} target="_blank" rel="noopener noreferrer">
+                        GitHub
+                      </Link>
+                    </Button>
+                    <ProjectDialog project={projects[currentIndex]} />
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+          <Button
+            variant="outline"
+            size="icon"
+            className="ml-4 rounded-full shadow-sm"
+            onClick={nextProject}
+          >
+            <BsArrowRightCircleFill className="hover:text-[#0077b5] text-xl text-black dark:text-white" />
+          </Button>
         </div>
-        <Button
-          variant="outline"
-          size="icon"
-          className="ml-4 rounded-full shadow-sm"
-          onClick={nextProject}
-        >
-          <BsArrowRightCircleFill className="hover:text-[#0077b5] text-xl text-black dark:text-white" />
-        </Button>
       </div>
-    </div>
-  )
-}
+    );
+  }

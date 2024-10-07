@@ -42,7 +42,9 @@ export default function Navbar() {
 
 
         <nav className="fixed flex justify-between  w-full  backdrop-filter backdrop-blur-md px-4 py-1 z-50 align-items-center">
-            <Link href="/"><Image src="/images/space-logo.png" alt="My Logo" className=" inline-block mr-4 bg-slate-950 rounded-full dark:bg-transparent dark:rounded-none" width="95" height="95" /></Link>
+            {/* <Link href="/"><Image src="/images/yha-logo.png" alt="My Logo" className=" inline-block mr-4 bg-slate-950 rounded-full dark:bg-transparent dark:rounded-none" width="95" height="95" /></Link> */}
+            <Link href="/"><Image src="/images/yha-logo-edit.png" alt="My Logo" className=" inline-block mr-4" width="50" height="50" /></Link>
+
             <motion.button onClick={handleClick}
                 whileTap={{ scale: 0.9 }}
                 style={{ backgroundImage: `url('/images/earth.png')` }}

@@ -9,7 +9,10 @@ import Preloader from "@/components/PreLoader";
 import About from "./pages/about";
 import Timeline from "./pages/timeline";
 import Work from "./pages/work";
+import Skills from "./pages/skills";
 import { useRef } from "react";
+import Languages from "./pages/languages";
+import Contact from "./pages/contact";
 export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -56,6 +59,13 @@ export default function Home() {
       {/* Work Section */}
       <Work />
       {/* Work Section */}
-    </>
+      { /* Skill Section */}
+      <Skills/>
+      {/* Skill Section */}
+      { /* Language Section */}
+      <Languages/>
+      {/* Langulage Section */}
+      <Contact/>
+      </>
   );
 }

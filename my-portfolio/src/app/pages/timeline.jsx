@@ -38,7 +38,7 @@ export default function Timeline() {
 
     return (
         <>
-            <section className="bg-stone-600 dark:bg-transparent">
+            <section className="bg-[linear-gradient(to_right,#EAEAEA,#DBDBDB,#F2F2F2,#ADA996)] dark:bg-[linear-gradient(to_right,#121212,#2C2C2C,#383838,#444444)]">
                 <VerticalTimeline>
                     <AnimatedTimelineElement
                     visible={true}
@@ -49,7 +49,8 @@ export default function Timeline() {
                             fontWeight: 'bold',
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
                             border: '2px solid #fff',
-                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)'
+                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
+                            marginBottom: '15px'
                         }}
                         contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
                         date="2011 - present"
@@ -77,7 +78,8 @@ export default function Timeline() {
                             fontWeight: 'bold',
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
                             border: '2px solid #fff',
-                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)'
+                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
+                            marginBottom: '15px'
                         }}
                         contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
                         date="2011 - present"
@@ -104,7 +106,8 @@ export default function Timeline() {
                             fontWeight: 'bold',
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
                             border: '2px solid #fff',
-                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)'
+                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
+                            marginBottom: '15px'
                         }}
                         contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
                         date="2011 - present"
