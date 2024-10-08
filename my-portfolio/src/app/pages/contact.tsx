@@ -75,7 +75,8 @@ function Contact() {
                 className="min-h-[150px]"
               />
             </div>
-            <Button type="submit" className="w-full">Send Message</Button>
+            <Button type="submit"   className="w-full shadow-sm border-2 border-black dark:border-white bg-white dark:bg-black text-black dark:text-white hover:bg-[#BE185D] hover:text-white dark:hover:bg-gray-800"
+            >Send Message</Button>
           </form>
         </div>
       </div>
