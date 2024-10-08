@@ -1,21 +1,51 @@
-import React from 'react'
+'use client'; 
+import React,{useState, ChangeEvent, FormEvent} from 'react'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Input } from '@/components/ui/input'
 import Image from 'next/image'
 function Contact() {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+  const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      setStatus('Email sent successfully!');
+    } else {
+      setStatus('Failed to send email.');
+    }
+
+    setFormData({ name: '', email: '', message: '' });
+  };
+  
   return (
-    <section className="container mx-auto pb-12 px-8">
+    <section className="container mx-auto pb-12 px-8" id="contact">
       <div className="grid sm:grid-cols-1 grid-cols-2 gap-8 items-center">
-        <div className="relative h-[400px] md:h-full">
-          {/* <Image
-            src=""
+        <div className=" md:h-full">
+          <Image
+            src="/images/astronout.gif"
             alt="Contact visual"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             className="rounded-lg object-cover w-full h-full"
-          /> */}
+          />
+          
         </div>
         <div className="space-y-6">
           <div className="space-y-2">
@@ -24,19 +54,22 @@ function Contact() {
               I'd love to hear from you. Fill out the form below and I'll get back to you as soon as possible.
             </p>
           </div>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Your name" required />
+              <Input id="name" placeholder="Your name" value={formData.name}  onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" placeholder="Your email" type="email" required />
+              <Input id="email" value={formData.email}      onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="Your email" type="email" required />
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
               <Textarea
+              value={formData.message}
                 id="message"
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+
                 placeholder="Your message"
                 required
                 className="min-h-[150px]"

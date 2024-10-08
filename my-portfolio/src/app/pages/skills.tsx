@@ -37,19 +37,19 @@ interface Language {
     },
     {
       name: 'TypeScript',
-      proficiency:'20',
+      proficiency:'60',
       color: '#3178C6',
       icon: <SiTypescript className="h-6 w-6" />
     },
     {
       name: 'PHP',
-      proficiency:' 60',
+      proficiency:' 90',
       color: '#00599C',
       icon: <SiPhp className="h-6 w-6" />
     },
     {
       name: 'MySql',
-      proficiency:' 60',
+      proficiency:' 90',
       color: '#00599C',
       icon: <SiMysql className="h-6 w-6" />
     },

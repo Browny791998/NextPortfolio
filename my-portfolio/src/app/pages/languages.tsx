@@ -81,7 +81,7 @@ function Languages() {
                 justifyContent: 'center',
             }}
         >
-            <Carousel height={400} width={1000} yOrigin={42} yRadius={70} autoPlay={true}>
+            <Carousel height={300} width={1000} yOrigin={42} yRadius={70} autoPlay={true}>
                 {languages.map((language, index) => (
                     <div key={index} >
                         {language.icon}

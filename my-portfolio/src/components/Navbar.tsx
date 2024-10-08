@@ -68,8 +68,8 @@ export default function Navbar() {
             <ul className={`flex items-center gap-10 justify-end ${spaceGrotesk.className} sm:hidden`}>
                 <li className="mr-4"><Link href="#" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">Home</Link></li>
                 <li className="mr-4"><Link href="#about" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">About</Link></li>
-                <li className="mr-4"><Link href="#" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">My Work</Link></li>
-                <li><a href="#" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">Contact</a></li>
+                <li className="mr-4"><Link href="#work" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">My Work</Link></li>
+                <li><a href="#contact" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">Contact</a></li>
             </ul>
             <ul className={`flex items-center gap-10 justify-end ${spaceGrotesk.className} sm:hidden`}>
                 <li><Link href="#" ><BsLinkedin className="hover:text-[#0077b5] text-xl" /></Link></li>
@@ -88,11 +88,11 @@ export default function Navbar() {
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             className="sm:block absolute bg-gray-950 w-[100%]  backdrop-filter backdrop-blur-md top-0 right-0  px-8 py-20 uppercase  hidden">
                             <ul className={`flex flex-col items-center justify-between min-h-[380px] ${spaceGrotesk.className}`}>
-                                <li className="flex gap-2 transition-all">
+                                <li onClick={()=> setIsOpen(false)} className="flex gap-2 transition-all">
                                     <motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_2.svg" alt="" /></motion.span><Link href="#" className="text-white font-bold ">Home</Link></li>
-                                <li className="flex gap-2"><Link href="#" className="text-white font-bold">About</Link><motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_7.svg" alt="" /></motion.span></li>
-                                <li className="flex gap-2"><motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_9.svg" alt="" /></motion.span><Link href="#" className="text-white font-bold">My Work</Link></li>
-                                <li className="flex gap-2"><a href="#" className="text-white font-bold">Contact</a><motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_11.svg" alt="" /></motion.span></li>
+                                <li onClick={()=> setIsOpen(false)} className="flex gap-2"><Link href="#about" className="text-white font-bold">About</Link><motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_7.svg" alt="" /></motion.span></li>
+                                <li onClick={()=> setIsOpen(false)} className="flex gap-2"><motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_9.svg" alt="" /></motion.span><Link href="#work" className="text-white font-bold">My Work</Link></li>
+                                <li onClick={()=> setIsOpen(false)} className="flex gap-2"><a href="#contact" className="text-white font-bold">Contact</a><motion.span whileHover={{ rotate: 360 }} transition={{ ease: 'easeInOut', duration: 1 }}><Image width='20' height='20' src="/images/space-planet-svg-bundle-space-planet_11.svg" alt="" /></motion.span></li>
                             </ul>
 
                             <ul className={`flex items-center mt-16 justify-center gap-5 ${spaceGrotesk.className}`}>

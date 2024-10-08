@@ -1,6 +1,6 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { MdSchool } from 'react-icons/md';
+import { MdSchool,MdWork,Mdwork } from 'react-icons/md';
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
 import { FC, ReactNode } from 'react';
@@ -10,10 +10,6 @@ export default function Timeline() {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
     };
-
-    // interface AnimatedTimelineElementProps {
-    //     children: ReactNode;
-    //   }
 
     // Custom Timeline Element component with in-view animation
     const AnimatedTimelineElement = ({ children, ...props }) => {
@@ -41,87 +37,100 @@ export default function Timeline() {
             <section className="bg-[linear-gradient(to_right,#EAEAEA,#DBDBDB,#F2F2F2,#ADA996)] dark:bg-[linear-gradient(to_right,#121212,#2C2C2C,#383838,#444444)]">
                 <VerticalTimeline>
                     <AnimatedTimelineElement
-                    visible={true}
+                        visible={true}
                         className="vertical-timeline-element--work"
                         contentStyle={{
                             background: 'transparent',
                             color: '#fff',
                             fontWeight: 'bold',
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
-                            border: '2px solid #fff',
+                            border: '2px solid black',
                             boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
                             marginBottom: '15px'
                         }}
-                        contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
-                        date="2011 - present"
+                        contentArrowStyle={{ borderRight: '7px solid black' }}
+
                         iconStyle={{
                             backgroundImage: "url('images/earth.png')",
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}
-                        icon={<MdSchool />}
+                        icon={<MdWork />}
                     >
-                        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                        <p>
-                            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                        <h3 className="vertical-timeline-element-title text-black dark:text-white">
+                        Dagon University (Computer Science Department)
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle text-black dark:text-white">
+                        [2015-2019]
+                        </h4>
+                        <p className="text-black dark:text-white">
+                        learn programming theory and frontend,backend languages
                         </p>
                     </AnimatedTimelineElement>
 
                     <AnimatedTimelineElement
-                    position="right"
-                    visible={true}
+                        position="right"
+                        visible={true}
                         className="vertical-timeline-element--work"
                         contentStyle={{
                             background: 'transparent',
                             color: '#fff',
                             fontWeight: 'bold',
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
-                            border: '2px solid #fff',
+                            border: '2px solid black',
                             boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
                             marginBottom: '15px'
                         }}
-                        contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
-                        date="2011 - present"
+                        contentArrowStyle={{ borderRight: '7px solid black' }}
+
                         iconStyle={{
-                            backgroundImage: "url('images/earth.png')",
+                            backgroundImage: "url('images/space-planet-svg-bundle-space-planet_4.svg')",
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}
                         icon={<MdSchool />}
                     >
-                        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                        <p>
-                            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                        <h3 className="vertical-timeline-element-title text-black dark:text-white">
+                            Dagon University (Computer Science Department)
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle text-black dark:text-white">
+                           [2015-2019]
+                        </h4>
+                        <p className="text-black dark:text-white">
+                            learn programming theory and frontend,backend languages
                         </p>
                     </AnimatedTimelineElement>
 
                     <AnimatedTimelineElement
-                    visible={true}
+                        visible={true}
+
                         className="vertical-timeline-element--work"
                         contentStyle={{
                             background: 'transparent',
                             color: '#fff',
                             fontWeight: 'bold',
                             textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
-                            border: '2px solid #fff',
+                            border: '2px solid black',
                             boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
                             marginBottom: '15px'
                         }}
-                        contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
-                        date="2011 - present"
+                        contentArrowStyle={{ borderRight: '7px solid black' }}
+
                         iconStyle={{
-                            backgroundImage: "url('images/earth.png')",
+                            backgroundImage: "url('images/space-planet-svg-bundle-space-planet_3.svg')",
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}
                         icon={<MdSchool />}
                     >
-                        <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-                        <p>
-                            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                        <h3 className="vertical-timeline-element-title text-black dark:text-white">
+                            Dagon University (Computer Science Department)
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle text-black dark:text-white">
+                           [2015-2019]
+                        </h4>
+                        <p className="text-black dark:text-white">
+                            learn programming theory and frontend,backend languages
                         </p>
                     </AnimatedTimelineElement>
                 </VerticalTimeline>
