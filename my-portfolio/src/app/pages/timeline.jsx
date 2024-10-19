@@ -55,7 +55,7 @@ export default function Timeline() {
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}
-                        icon={<MdWork />}
+                        icon={<MdSchool />}
                     >
                         <h3 className="vertical-timeline-element-title text-black dark:text-white">
                         Dagon University (Computer Science Department)
@@ -88,16 +88,16 @@ export default function Timeline() {
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}
-                        icon={<MdSchool />}
+                        icon={<MdWork />}
                     >
                         <h3 className="vertical-timeline-element-title text-black dark:text-white">
-                            Dagon University (Computer Science Department)
+                            BIB training
                         </h3>
                         <h4 className="vertical-timeline-element-subtitle text-black dark:text-white">
-                           [2015-2019]
+                           [2022]
                         </h4>
                         <p className="text-black dark:text-white">
-                            learn programming theory and frontend,backend languages
+                        I have learned HTML, CSS, and jQuery for frontend development, and C# with the ASP.NET framework for backend development. I have built various static websites and collaborated with a team to develop a job portal website as my final project.
                         </p>
                     </AnimatedTimelineElement>
 
@@ -121,16 +121,48 @@ export default function Timeline() {
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                         }}
-                        icon={<MdSchool />}
+                        icon={<MdWork />}
                     >
                         <h3 className="vertical-timeline-element-title text-black dark:text-white">
-                            Dagon University (Computer Science Department)
+                            Metateam Myanmar
                         </h3>
                         <h4 className="vertical-timeline-element-subtitle text-black dark:text-white">
-                           [2015-2019]
+                           [2022-2024]
                         </h4>
                         <p className="text-black dark:text-white">
-                            learn programming theory and frontend,backend languages
+                        As a junior developer, I have gained experience through on-the-job training (OJT) projects, including a custom project called the Patient Care System and an Asset Management System.                        </p>
+                    </AnimatedTimelineElement>
+                
+                     <AnimatedTimelineElement
+                        position="right"
+                        visible={true}
+                        className="vertical-timeline-element--work"
+                        contentStyle={{
+                            background: 'transparent',
+                            color: '#fff',
+                            fontWeight: 'bold',
+                            textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+                            border: '2px solid black',
+                            boxShadow: '0 0 4px skyblue, 0 0 8px rgba(255, 255, 255, 0.5)',
+                            marginBottom: '15px'
+                        }}
+                        contentArrowStyle={{ borderRight: '7px solid black' }}
+
+                        iconStyle={{
+                            backgroundImage: "url('images/space-planet-svg-bundle-space-planet_6.svg')",
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                        icon={<MdWork />}
+                    >
+                        <h3 className="vertical-timeline-element-title text-black dark:text-white">
+                        Metateam Myanmar
+                        </h3>
+                        <h4 className="vertical-timeline-element-subtitle text-black dark:text-white">
+                        [2022-2024]
+                        </h4>
+                        <p className="text-black dark:text-white">
+                        As a senior developer, I have worked on a custom project called the Nursing Schedule Management System, gaining valuable experience in the process.
                         </p>
                     </AnimatedTimelineElement>
                 </VerticalTimeline>

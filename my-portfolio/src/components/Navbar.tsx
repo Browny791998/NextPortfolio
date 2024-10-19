@@ -72,10 +72,10 @@ export default function Navbar() {
                 <li><a href="#contact" className="dark:text-white font-bold hover:underline underline-offset-8 decoration-pink-700">Contact</a></li>
             </ul>
             <ul className={`flex items-center gap-10 justify-end ${spaceGrotesk.className} sm:hidden`}>
-                <li><Link href="#" ><BsLinkedin className="hover:text-[#0077b5] text-xl" /></Link></li>
-                <li><Link href="#" ><BsGithub className="hover:text-gray-400 text-xl" /></Link></li>
-                <li><Link href="#" ><BsFacebook className="hover:text-[#3b5998] text-xl" /></Link></li>
-                <li><Link href="#" ><BsTwitterX className="hover:text-gray-400 text-xl" /></Link></li>
+                <li><a href="https://www.linkedin.com/in/yehtetaung791998" target="_blank"><BsLinkedin className="hover:text-[#0077b5] text-xl" /></a></li>
+                <li><a href="https://github.com/Browny791998" target="_blank" ><BsGithub className="hover:text-gray-400 text-xl" /></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100073584559399" target="_blank"><BsFacebook className="hover:text-[#3b5998] text-xl" /></a></li>
+                {/* <li><Link href="#" ><BsTwitterX className="hover:text-gray-400 text-xl" /></Link></li> */}
             </ul>
 
             {
@@ -96,10 +96,10 @@ export default function Navbar() {
                             </ul>
 
                             <ul className={`flex items-center mt-16 justify-center gap-5 ${spaceGrotesk.className}`}>
-                                <li><Link href="#" ><BsLinkedin className="hover:text-[#0077b5] text-xl text-white" /></Link></li>
-                                <li><Link href="#" ><BsGithub className="hover:text-gray-400 text-xl text-white" /></Link></li>
-                                <li><Link href="#" ><BsFacebook className="hover:text-[#3b5998] text-xl text-white" /></Link></li>
-                                <li><Link href="#" ><BsTwitterX className="hover:text-gray-400 text-xl text-white" /></Link></li>
+                                <li><a href="https://www.linkedin.com/in/yehtetaung791998" target="_blank"><BsLinkedin className="hover:text-[#0077b5] text-xl text-white" /></a></li>
+                                <li><a href="https://github.com/Browny791998" target="_blank"><BsGithub className="hover:text-gray-400 text-xl text-white" /></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100073584559399" target="_blank"><BsFacebook className="hover:text-[#3b5998] text-xl text-white" /></a></li>
+                                {/* <li><Link href="#" ><BsTwitterX className="hover:text-gray-400 text-xl text-white" /></Link></li> */}
                             </ul>
                         </motion.div>
                     </>

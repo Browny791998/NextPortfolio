@@ -26,62 +26,38 @@ interface Project {
   technologies: string[]
   githubUrl: string
   detailedDescription: string
-  challenges: string[]
-  outcomes: string[]
 }
 
 const projects: Project[] = [
   {
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with user authentication, product management, and payment integration.",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+    title: "Job Portal Management system",
+    description: "A job seeker system at BIB using ASP.NET, Bootstrap, and MySQL, handling both frontend and backend development..",
+    technologies: ["C#", "Asp.net", "Bootstrap", "Microsoft sql server","Jquery"],
     githubUrl: "https://github.com/yourusername/ecommerce-platform",
-    detailedDescription: "This e-commerce platform provides a comprehensive solution for online retail. It features a responsive front-end built with React, a robust back-end powered by Node.js and Express, and uses MongoDB for data storage. The platform includes user authentication, product catalog management, shopping cart functionality, and secure payment processing through Stripe integration.",
-    challenges: [
-      "Implementing secure user authentication and authorization",
-      "Designing a scalable database schema for products and orders",
-      "Integrating and testing the Stripe payment gateway",
-    ],
-    outcomes: [
-      "Increased conversion rates by 25% through an optimized checkout process",
-      "Reduced server response times by 40% through efficient database queries",
-      "Successfully processed over 10,000 orders within the first month of launch",
-    ],
+    detailedDescription: "During my training at BIB, I developed a comprehensive job seeker system. The platform allows companies to post job offerings, and users can search for jobs using various filters such as job position and type. Additionally, companies can view applicants' resumes. The system was built using the ASP.NET framework, Bootstrap for the frontend, and MySQL as the database. I was responsible for both the frontend and backend development, including the user-facing site and the admin dashboard",
   },
   {
-    title: "Task Management App",
-    description: "A full-stack e-commerce solution with user authentication, product management, and payment integration.",
-    technologies: ["Vue.js", "Firebase", "Vuex", "Tailwind CSS"],
+    title: "Patient care system",
+    description: "A patient care system's doctor dashboard using Angular and Python, with integration of cloud technologies.",
+    technologies: ["Angular", "Python", "Flask", "Google cloud","Wordpress","Mysql"],
     githubUrl: "https://github.com/yourusername/task-management-app",
-    detailedDescription: "This task management application enables teams to collaborate effectively by providing real-time updates on task progress. Built with Vue.js and Firebase, it offers a responsive and intuitive interface for creating, assigning, and tracking tasks. The app utilizes Vuex for state management and Tailwind CSS for a clean, modern design.",
-    challenges: [
-      "Implementing real-time synchronization of task updates across multiple clients",
-      "Designing an intuitive user interface for complex task relationships",
-      "Optimizing performance for large numbers of tasks and users",
-    ],
-    outcomes: [
-      "Increased team productivity by 30% through improved task visibility and collaboration",
-      "Reduced project completion times by 20% due to more efficient task allocation",
-      "Achieved a 95% user satisfaction rate based on post-implementation surveys",
-    ],
+    detailedDescription: "This system is designed for users, such as caregivers, to upload the health status of a patient. The caregiver can also provide personal details about themselves. Doctors then use the information to diagnose the primary health issue of the patient based on the updates provided.I worked as a key team member on a patient care system, utilizing HTML, CSS, JavaScript, and Python. The system comprised a customer-facing website built with WordPress, PHP, and MySQL, and a dashboard for doctors developed with Angular on the frontend and Python on the backend, hosted on Google Cloud. While I primarily focused on developing the doctor dashboard, I also gained exposure to technologies like the NDB library for database management, OpenAI for API generation, and basic BigQuery syntax. Although I didn’t directly work on the deep learning and machine learning components, I made efforts to understand their application within the project.",
   },
   {
-    title: "Weather Forecast Dashboard",
-    description: "A full-stack e-commerce solution with user authentication, product management, and payment integration.",
-    technologies: ["React", "Redux", "D3.js", "OpenWeatherMap API"],
+    title: "Assets Management system",
+    description: "A company asset management system using Laravel, Vue, and Inertia.js, featuring asset tracking, employee data management, and dashboard visualizations.",
+    technologies: ["Laravel", "Vue", "Inertia.js", "Tailwind","Mysql"],
     githubUrl: "https://github.com/yourusername/weather-forecast-dashboard",
-    detailedDescription: "This weather forecast dashboard offers users a comprehensive view of current and future weather conditions. Built with React and Redux, it fetches data from the OpenWeatherMap API and presents it through interactive charts and graphs created with D3.js. Users can view detailed forecasts, historical weather data, and custom alerts for specific locations.",
-    challenges: [
-      "Integrating and optimizing calls to the OpenWeatherMap API",
-      "Creating responsive and interactive data visualizations with D3.js",
-      "Implementing efficient state management for large amounts of weather data",
-    ],
-    outcomes: [
-      "Achieved 99.9% uptime and real-time data updates",
-      "Increased user engagement by 40% through interactive weather visualizations",
-      "Expanded the user base to over 100,000 active monthly users",
-    ],
+    detailedDescription: "This system is designed to manage and store all company assets, tracking detailed information such as asset values and the employees using them. Employee data is also stored. Administrators can import asset data manually or through CSV files. Asset summaries are visualized on the dashboard using charts, and the company performs monthly asset checks, with the history of these checks saved in the database. The system was developed using Laravel for the backend, Vue and Inertia.js for the frontend, and Tailwind CSS for the design. I was responsible for both the front and backend development.",
   },
+  {
+    title: "Nursing Care System",
+    description: "A nurse scheduling system using PHP and JavaScript, featuring task assignment, real-time attendance tracking, and schedule export in PDF/CSV formats.",
+    technologies: ["PHP", "Jquery", "HTML", "CSS","Postgresql"],
+    githubUrl: "https://github.com/yourusername/weather-forecast-dashboard",
+    detailedDescription: "This system is designed to manage the scheduling of nurses responsible for caring for elderly individuals. Administrators can assign tasks to each nurse and monitor their real-time attendance. The system also allows for the creation of customized services for the elderly and enables nurses to post daily updates on the condition of their patients. Additionally, users can export the schedule plans in both PDF and CSV formats. The system provides schedule visualization through various formats, offering clear insights. It was developed using pure PHP and JavaScript to ensure efficiency and functionality.",
+  },
+
 ]
 
 function ProjectDialog({ project }: { project: Project }) {
@@ -206,11 +182,11 @@ function ProjectDialog({ project }: { project: Project }) {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between mt-5">
-                    <Button variant="outline" asChild>
+                    {/* <Button variant="outline" asChild>
                       <Link href={projects[currentIndex].githubUrl} target="_blank" rel="noopener noreferrer">
                         GitHub
                       </Link>
-                    </Button>
+                    </Button> */}
                     <ProjectDialog project={projects[currentIndex]} />
                   </CardFooter>
                 </Card>
